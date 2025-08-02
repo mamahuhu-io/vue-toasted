@@ -1,0 +1,63 @@
+{
+  "name": "@mamahuhu/vue-toasted",
+  "description": "Port of vue-toasted to Vue 3",
+  "version": "0.1.0",
+  "private": false,
+  "author": "The Mamahuhu Team <support@mamahuhu.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamahuhu-io/vue-toasted.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/vue-toasted.umd.js",
+  "module": "dist/vue-toasted.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-toasted.mjs",
+      "require": "./dist/vue-toasted.umd.js"
+    },
+    "./style.css": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
+    }
+  },
+  "browserslist": [
+    "last 7 versions"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && copyfiles --flat src/index.d.ts dist",
+    "release": "npm run build"
+  },
+  "keywords": [
+    "toast",
+    "vue",
+    "vue-toasted",
+    "toasted",
+    "responsive",
+    "touch-compatible",
+    "touch",
+    "vue-toast",
+    "vue-toastr",
+    "toastr"
+  ],
+  "peerDependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@types/hammerjs": "^2.0.41",
+    "@types/node": "^18.7.13",
+    "@types/shortid": "^0.0.29",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "animejs": "^3.2.1",
+    "copyfiles": "^2.4.1",
+    "hammerjs": "^2.0.8",
+    "sass": "^1.54.5",
+    "shortid": "^2.2.16",
+    "vite": "^3.0.9"
+  }
+}
